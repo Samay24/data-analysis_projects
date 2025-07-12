@@ -12,10 +12,10 @@ This project presents an interactive **Sales Dashboard** created using **Power B
 
 ## 🧰 Tools & Technologies
 
-- Power BI Desktop (.pbix)
-- Data transformation using Power Query
-- Data modeling with Relationships
-- Visualizations: Bar Chart, Line Chart, Map, Donut Chart, Cards, Slicers
+- Power BI Desktop (.pbix)  
+- Data transformation using Power Query  
+- Data modeling with Relationships  
+- Visualizations: Bar Chart, Line Chart, Map, Donut Chart, Cards, Slicers  
 
 ## 📂 File
 
@@ -23,6 +23,4 @@ This project presents an interactive **Sales Dashboard** created using **Power B
 
 ## 🌐 Preview
 
-🔗(https://app.powerbi.com/view?r=eyJrIjoiMjhiMjZjOGEtMTczMS00YTJkLTk3YzktZmM5NjljODY5NTU0IiwidCI6IjBlNDI2NDY0LTY0OWYtNDlkNS1hMDgwLTY5MzY0MmVjMTZlYiJ9&pageName=4083a98b157ac909a0ac)
-
-
+🔗 [Sales Dashboard (Power BI Online)](https://app.powerbi.com/view?r=eyJrIjoiMjhiMjZjOGEtMTczMS00YTJkLTk3YzktZmM5NjljODY5NTU0IiwidCI6IjBlNDI2NDY0LTY0OWYtNDlkNS1hMDgwLTY5MzY0MmVjMTZlYiJ9&pageName=4083a98b157ac909a0ac)
