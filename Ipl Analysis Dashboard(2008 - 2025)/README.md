@@ -42,7 +42,7 @@ This Power BI project provides an interactive and visually rich analysis of the 
 
 ## 🛠️ Tech Stack
 
-- **Tool:** Power BI Desktop  
+- **Tool:** Power BI Desktop, Power Query, Dax Formulas
 - **Data Source:** IPL historical data (2008–2025)  
 - **Visual Elements Used:**
   - Card KPIs  
