@@ -38,6 +38,15 @@ Welcome to my **Data Visualization Portfolio**! This repository showcases variou
   - Monthly performance charts  
   - Dynamic dropdowns and slicers  
 
+### 5. **IPL Analysis (2008–2025)**
+- **Tools Used**: Power BI, Power Query, DAX  
+- **Description**: A dynamic Power BI dashboard that visualizes IPL data from 2008 to 2025. It covers team standings, player performance, and season-by-season insights.
+- **Key Features**:
+  - Season-wise champions, orange/purple cap holders  
+  - Dynamic filtering with dropdown for year  
+  - Player stats with images and match highlights  
+  - Clickable links to IPL website, Cricbuzz, Twitter, YouTube  
+
 ---
 
 ## 💡 Skills Demonstrated
@@ -60,5 +69,3 @@ Welcome to my **Data Visualization Portfolio**! This repository showcases variou
 - **Email**: [samaygupta963@gmail.com](mailto:samaygupta963@gmail.com)
 
 ---
-
-
