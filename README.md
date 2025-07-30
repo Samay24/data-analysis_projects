@@ -1,6 +1,6 @@
-# 📊 Data Visualization Projects
+# 📊 Data Analysis & Visualization Projects
 
-Welcome to my **Data Visualization Portfolio**! This repository showcases various data analysis and visualization projects using different tools. Each folder represents a distinct project that transforms raw data into interactive dashboards and insights for better decision-making.
+Welcome to my **Portfolio**! This repository showcases various data analysis and visualization projects using different tools. Each folder represents a distinct project that transforms raw data into interactive dashboards and insights for better decision-making.
 
 ---
 
