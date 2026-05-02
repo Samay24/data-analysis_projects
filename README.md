@@ -60,7 +60,15 @@ Welcome to my **Portfolio**! This repository showcases various data analysis and
 
 ## 📂 How to Explore
 1. Click on any folder to view the project.  
-2. Open the `README.md` file inside each project for detailed explanation.  
+2. Open the `README.md` file inside each project for detailed explanation.
+
+---
+
+## 📊 Live Preview
+
+🚀 Experience the interactive dashboard in real-time:
+
+🔗 **[Click here to explore the live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDAyOWI4MGUtNTRmMy00ZjkxLThkNWYtZTQyMTI2MWEzMzUzIiwidCI6IjBlNDI2NDY0LTY0OWYtNDlkNS1hMDgwLTY5MzY0MmVjMTZlYiJ9)**
 
 ---
 
