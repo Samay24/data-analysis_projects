@@ -167,7 +167,7 @@ Using **AI-assisted analysis**, this project simulates a real-world **Product Ma
 
 📌 **Notion Documentation**
 
-> **🔗 Notion:** https://app.notion.com/p/AI-Projects-PM-386c2359b091809abad5f98d62fcda3d?fbclid=PAVERTVgSo6ApleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAac_nOF54SsQJMxsCVuu5Y1wAUvTgAmo-4lZwvb30TAO12mNDWN39D2Es1Ak6A_aem_5iFhsnxItVM61w1wImv3wA
+> **🔗 Notion:**https://product-feedback-analysis.notion.site/Product-Feedback-Analysis-Zomato-38a646e3ec9c80f8812bf77cb3223346
 
 .
 
