@@ -45,7 +45,19 @@ Welcome to my **Portfolio**! This repository showcases various data analysis and
   - Season-wise champions, orange/purple cap holders  
   - Dynamic filtering with dropdown for year  
   - Player stats with images and match highlights  
-  - Clickable links to IPL website, Cricbuzz, Twitter, YouTube  
+  - Clickable links to IPL website, Cricbuzz, Twitter, YouTube
+
+### 6.**Product Feedback Analysis – Zomato (AI-Assisted User Research) **
+- **Tools Used**: Claude AI, Microsoft Excel, Google Sheets, Notion
+- **Description**: Conducted AI-assisted analysis of Google Play Store reviews to identify recurring customer pain points, categorize feedback into business themes, and propose a prioritized product roadmap with measurable success metrics. The project demonstrates product thinking by converting unstructured customer feedback into actionable product decisions.
+-**Key Features**:
+AI-assisted thematic analysis of customer reviews
+User sentiment and pain-point identification
+Review segmentation into business categories
+Prioritized feature roadmap based on customer impact
+Product recommendations with measurable KPIs
+Interactive Excel dashboard for insights
+Comprehensive case study documented in Notion
 
 ---
 
@@ -54,7 +66,13 @@ Welcome to my **Portfolio**! This repository showcases various data analysis and
 - Data Modeling  
 - Interactive Visual Design  
 - Dashboard Development  
-- Data Storytelling  
+- Data Storytelling
+- Product Thinking
+- Customer Feedback Analysis
+- User Research
+- Product Prioritization
+- AI-assisted Data Analysis
+- Business Analysis
 
 ---
 
