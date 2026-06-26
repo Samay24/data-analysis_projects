@@ -47,7 +47,7 @@ Welcome to my **Portfolio**! This repository showcases various data analysis and
   - Player stats with images and match highlights  
   - Clickable links to IPL website, Cricbuzz, Twitter, YouTube
 
-### 6.**Product Feedback Analysis – Zomato (AI-Assisted User Research) **
+### 6. **Product Feedback Analysis – Zomato (AI-Assisted User Research)**
 - **Tools Used**: Claude AI, Microsoft Excel, Google Sheets, Notion
 - **Description**: Conducted AI-assisted analysis of Google Play Store reviews to identify recurring customer pain points, categorize feedback into business themes, and propose a prioritized product roadmap with measurable success metrics. The project demonstrates product thinking by converting unstructured customer feedback into actionable product decisions.
 -**Key Features**:
