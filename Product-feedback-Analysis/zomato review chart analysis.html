@@ -1,0 +1,169 @@
+
+<h2 class="sr-only">Three charts analysing 15,296 Zomato reviews: theme mentions with negativity rate, rating distribution donut, and priority matrix bubble chart.</h2>
+
+<style>
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.mc{background:var(--color-background-secondary);border-radius:8px;padding:12px 14px}
+.ml{font-size:11px;color:var(--color-text-secondary);margin:0 0 3px}
+.mv{font-size:20px;font-weight:500;color:var(--color-text-primary);margin:0}
+.ms{font-size:11px;color:var(--color-text-secondary);margin:2px 0 0}
+.chart-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:12px;padding:18px;margin-bottom:18px}
+.chart-title{font-size:14px;font-weight:500;color:var(--color-text-primary);margin:0 0 2px;text-align:center}
+.chart-sub{font-size:11px;color:var(--color-text-secondary);margin:0 0 14px;text-align:center}
+.legend-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px;font-size:12px;color:var(--color-text-secondary);justify-content:center}
+.li{display:flex;align-items:center;gap:5px}
+.ls{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+</style>
+
+<div class="metric-row">
+  <div class="mc"><p class="ml">Total reviews</p><p class="mv">15,296</p></div>
+  <div class="mc"><p class="ml">1-star reviews</p><p class="mv">34.8%</p><p class="ms">5,321 reviews</p></div>
+  <div class="mc"><p class="ml">Most complained theme</p><p class="mv">Pricing</p><p class="ms">2,554 mentions</p></div>
+  <div class="mc"><p class="ml">Highest negativity</p><p class="mv">93.5%</p><p class="ms">Wrong / missing orders</p></div>
+</div>
+
+<div class="chart-card">
+  <p class="chart-title">Theme mentions vs negativity rate</p>
+  <p class="chart-sub">Bar = total mentions · Dot = % of mentions that are negative (right axis)</p>
+  <div class="legend-row">
+    <span class="li"><span class="ls" style="background:#E24B4A"></span>Total mentions</span>
+    <span class="li"><span class="ls" style="background:#185FA5;border-radius:50%"></span>Negativity rate %</span>
+  </div>
+  <div style="position:relative;width:100%;height:300px">
+    <canvas id="c1" role="img" aria-label="Combined bar and line chart. Pricing 2554 mentions 57.5% negative. Delivery delays 1653 mentions 83.1% negative. Customer support 1616 mentions 91.8% negative. Refund payment 1170 mentions 85.6% negative. App UI 499 mentions 33.7% negative. Wrong missing orders 397 mentions 93.5% negative. Food quality 329 mentions 81.5% negative.">Data in aria-label.</canvas>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+
+  <div class="chart-card">
+    <p class="chart-title">Rating distribution</p>
+    <p class="chart-sub">Share of all 15,296 reviews by star rating</p>
+    <div class="legend-row" style="flex-direction:column;gap:6px;align-items:flex-start;padding-left:12px">
+      <span class="li"><span class="ls" style="background:#E24B4A"></span>1 star — 34.8% (5,321)</span>
+      <span class="li"><span class="ls" style="background:#EF9F27"></span>2 stars — 2.9% (450)</span>
+      <span class="li"><span class="ls" style="background:#888780"></span>3 stars — 4.4% (680)</span>
+      <span class="li"><span class="ls" style="background:#5DCAA5"></span>4 stars — 9.7% (1,487)</span>
+      <span class="li"><span class="ls" style="background:#1D9E75"></span>5 stars — 48.1% (7,358)</span>
+    </div>
+    <div style="position:relative;width:100%;height:200px">
+      <canvas id="c2" role="img" aria-label="Donut chart: 1 star 34.8%, 2 star 2.9%, 3 star 4.4%, 4 star 9.7%, 5 star 48.1%.">Rating distribution.</canvas>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <p class="chart-title">Priority matrix</p>
+    <p class="chart-sub">Bubble size = mention volume · X = negativity rate</p>
+    <div style="position:relative;width:100%;height:260px">
+      <canvas id="c3" role="img" aria-label="Bubble chart mapping seven themes by negativity rate and mention volume.">Priority matrix.</canvas>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const tc = isDark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.55)';
+const gc = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)';
+
+const themes      = ['Pricing & charges','Delivery delays','Customer support','Refund & payment','App / UI','Wrong / missing','Food quality'];
+const shortLabels = ['Pricing','Delivery','Support','Refund','App / UI','Wrong orders','Food quality'];
+const totals      = [2554,1653,1616,1170,499,397,329];
+const negRates    = [57.5,83.1,91.8,85.6,33.7,93.5,81.5];
+
+new Chart(document.getElementById('c1'),{
+  type:'bar',
+  data:{
+    labels: themes,
+    datasets:[
+      {
+        type:'bar',
+        label:'Total mentions',
+        data: totals,
+        backgroundColor:'#E24B4A',
+        borderWidth:0,
+        borderRadius:3,
+        yAxisID:'y'
+      },
+      {
+        type:'line',
+        label:'Negativity rate %',
+        data: negRates,
+        borderColor:'#185FA5',
+        backgroundColor:'#185FA5',
+        pointBackgroundColor:'#185FA5',
+        pointRadius:5,
+        pointHoverRadius:7,
+        borderWidth:2,
+        tension:0.3,
+        yAxisID:'y2'
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:ctx=>ctx.dataset.type==='line'?' Negativity: '+ctx.parsed.y+'%':' Mentions: '+ctx.parsed.y.toLocaleString()}}
+    },
+    scales:{
+      x:{grid:{display:false},ticks:{color:tc,font:{size:11},maxRotation:30,autoSkip:false}},
+      y:{position:'left',grid:{color:gc},ticks:{color:tc,font:{size:11},callback:v=>v>=1000?(v/1000).toFixed(1)+'k':v}},
+      y2:{position:'right',min:0,max:100,grid:{display:false},ticks:{color:'#185FA5',font:{size:11},callback:v=>v+'%'}}
+    }
+  }
+});
+
+new Chart(document.getElementById('c2'),{
+  type:'doughnut',
+  data:{
+    labels:['1 star','2 stars','3 stars','4 stars','5 stars'],
+    datasets:[{
+      data:[5321,450,680,1487,7358],
+      backgroundColor:['#E24B4A','#EF9F27','#888780','#5DCAA5','#1D9E75'],
+      borderWidth:2,
+      borderColor: isDark?'#1a1a1a':'#ffffff'
+    }]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    cutout:'62%',
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:ctx=>' '+ctx.label+': '+ctx.parsed.toLocaleString()}}
+    }
+  }
+});
+
+new Chart(document.getElementById('c3'),{
+  type:'bubble',
+  data:{
+    datasets: shortLabels.map((name,i)=>({
+      label: name,
+      data:[{x:negRates[i], y:i+1, r:Math.max(6,Math.round(totals[i]/120))}],
+      backgroundColor: negRates[i]>=85?'rgba(226,75,74,0.75)':negRates[i]>=55?'rgba(239,159,39,0.75)':'rgba(93,202,165,0.75)',
+      borderColor: negRates[i]>=85?'#A32D2D':negRates[i]>=55?'#854F0B':'#0F6E56',
+      borderWidth:1.5
+    }))
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    layout:{padding:{right:10,top:10,bottom:10}},
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{
+        title:ctx=>ctx[0].dataset.label,
+        label:ctx=>[' Negativity: '+ctx.raw.x+'%',' Mentions: '+totals[ctx.datasetIndex].toLocaleString()]
+      }}
+    },
+    scales:{
+      x:{min:20,max:100,grid:{color:gc},title:{display:true,text:'Negativity rate →',color:tc,font:{size:11}},ticks:{color:tc,font:{size:11},callback:v=>v+'%'}},
+      y:{min:0,max:8,grid:{display:false},ticks:{color:tc,font:{size:11},callback:v=>shortLabels[v-1]||''}}
+    }
+  }
+});
+</script>
