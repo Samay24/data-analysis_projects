@@ -9,127 +9,122 @@
 
 </p>
 
----
 
-## 📖 Overview
+## 📌 Overview
 
-This project analyzes customer feedback collected from **Zomato's Google Play Store reviews** to identify recurring user pain points, categorize feedback into meaningful themes, and recommend data-driven product improvements.
-
-Using **AI-assisted analysis**, this project simulates a real-world **Product Manager's user research workflow**, transforming unstructured customer reviews into actionable product insights and a prioritized feature roadmap.
+This project analyzes reviews from the Zomato Google Play Store to identify user pain points, understand customer sentiment, and recommend data-driven product improvements. The objective is to simulate a real-world **Product Analytics** workflow by transforming unstructured customer feedback into actionable business insights.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
 * Analyze customer reviews to understand user sentiment.
 * Identify recurring customer pain points.
 * Categorize feedback into meaningful themes.
-* Prioritize product improvements based on customer impact.
-* Recommend data-driven feature enhancements.
-* Define measurable KPIs for proposed solutions.
+* Prioritize issues based on business impact.
+* Recommend data-driven product improvements.
+* Define measurable KPIs to evaluate feature success.
 
 ---
 
 ## 📂 Dataset
 
-**Source:** Google Play Store Reviews (Zomato)
-
-* **Analysis Method:** AI-assisted thematic analysis
-* **Documentation:** Microsoft Excel & Notion
+* **Source:** Google Play Store Reviews (Zomato)
+* **Review Ratings:** 1–5 Stars
 
 ---
 
 ## 📊 Review Segmentation
 
-| Theme                  | Mentions | Priority  |
-| ---------------------- | -------: | --------- |
-| 🚚 Delivery Issues     |       22 | 🔴 High   |
-| 🎧 Customer Support    |       17 | 🔴 High   |
-| 💰 Pricing & Fees      |       11 | 🔴 High   |
-| ❌ Order & Cancellation |        9 | 🟠 Medium |
-| 📱 App / UI Bugs       |        7 | 🟠 Medium |
-| 🍔 Food Quality        |        5 | 🟢 Low    |
+| Theme                  | Mentions | Negative Sentiment | Priority  |
+| ---------------------- | -------: | -----------------: | --------- |
+| Pricing & Charges      |    2,554 |              57.5% | 🔴 High   |
+| Delivery Delays        |    1,653 |              83.1% | 🔴 High   |
+| Customer Support       |    1,616 |              91.8% | 🔴 High   |
+| Refund & Payment       |    1,170 |              85.6% | 🟠 Medium |
+| Wrong / Missing Orders |      397 |          **93.5%** | 🔴 High   |
+| Food Quality           |      329 |              81.5% | 🟠 Medium |
+| App / UI Issues        |      499 |              33.7% | 🟡 Low    |
 
 ---
 
-## 🔍 Key Insights
+## ⭐ Key Insights
 
-### 🚚 1. Delivery Issues
+### Rating Distribution
 
-### Problems
+* ⭐⭐⭐⭐⭐ **48.1%** of users gave 5-star ratings.
+* ⭐ **34.8%** of users gave 1-star ratings.
+* Customer dissatisfaction is primarily driven by delivery delays, pricing transparency, customer support, and refund issues.
 
-* Delayed order deliveries
-* Inaccurate delivery time estimates
-* Limited visibility of order status
+### Major Customer Pain Points
 
-### Recommendation
-
-* Improve real-time order tracking
-* Introduce AI-powered delay prediction
-* Notify customers proactively about delays
-
----
-
-### 💳 2. Payment Problems
-
-### Problems
-
-* Payment failures during checkout
-* Slow refund processing
-* Unclear payment status
-
-### Recommendation
-
-* Implement an intelligent payment retry system
-* Provide real-time refund tracking
-* Improve payment confirmation visibility
+* Hidden pricing and additional platform fees.
+* Delivery delays and inaccurate ETAs.
+* Slow customer support with limited human assistance.
+* Payment failures and delayed refunds.
+* Wrong or missing food orders.
 
 ---
 
-### 🎧 3. Customer Support
+## 👥 User Segments
 
-### Problems
-
-* Slow customer support responses
-* Poor issue resolution
-* Difficulty reaching human agents
-
-### Recommendation
-
-* Deploy an AI-powered customer support assistant
-* Add priority-based ticket routing
-* Enable faster human escalation
+* **Busy Professionals** – Depend on accurate delivery times.
+* **Value-Conscious Users** – Sensitive to hidden charges.
+* **Late-Night Users** – Experience delayed deliveries.
+* **Senior & First-Time Users** – Prefer simple UI and human support.
 
 ---
 
-## 🚀 Prioritized Feature Roadmap
+## 🚀 Product Recommendations
 
-| Feature                                 | Business Impact | User Impact | Priority  |
-| --------------------------------------- | --------------- | ----------- | --------- |
-| Smart Delivery Tracking                 | High            | High        | 🔴 High   |
-| Intelligent Payment Retry System        | High            | High        | 🔴 High   |
-| AI-powered Customer Support             | High            | High        | 🔴 High   |
-| Improved UI Navigation                  | Medium          | Medium      | 🟠 Medium |
-| Personalized Restaurant Recommendations | Medium          | Medium      | 🟠 Medium |
+### High Priority
+
+* Live-agent escalation in customer support
+* All-in price display before checkout
+* Smart delivery tracking with ETA lock
+* Automatic delay compensation
+
+### Medium Priority
+
+* 24-hour refund SLA
+* Real-time refund tracking
+* Improved UPI payment reliability
+
+### Low Priority
+
+* Simplified app navigation
+* Better reorder experience
+* Enhanced restaurant review visibility
 
 ---
 
 ## 📈 Success Metrics (KPIs)
 
-* 📉 Reduce delivery-related complaints by **30%**
-* 📉 Reduce payment failure reports by **25%**
-* 😊 Improve Customer Satisfaction Score (CSAT)
-* ⭐ Increase Google Play Store Rating
-* ⏱ Reduce customer support resolution time
-* 🔄 Increase repeat order rate
-* 💼 Improve customer retention
+* 📉 Reduce delivery complaints by **40%**
+* 📉 Reduce hidden pricing complaints by **50%**
+* 📉 Reduce refund disputes by **35%**
+* ⭐ Improve CSAT by **25 points**
+* 📈 Increase repeat order rate by **15%**
+* ⭐ Improve Google Play Store rating
+
+---
+
+## 📊 Dashboard Highlights
+
+* Review Volume Analysis
+* Rating Distribution
+* Theme-wise Complaint Analysis
+* Sentiment Analysis
+* Priority Matrix
+* Business Insights
+* Product Recommendation Dashboard
 
 ---
 
 ## 🛠️ Tools Used
 
-* Claude AI
 * Microsoft Excel
+* Claude AI
 * Google Sheets
 * Notion
 
@@ -137,46 +132,35 @@ Using **AI-assisted analysis**, this project simulates a real-world **Product Ma
 
 ## 💡 Skills Demonstrated
 
-* Product Thinking
-* User Research
+* Product Analytics
 * Customer Feedback Analysis
-* Product Prioritization
-* Feature Roadmapping
-* AI-assisted Product Management
-* Data-driven Decision Making
+* Sentiment Analysis
+* User Research
+* Product Thinking
+* Feature Prioritization
+* KPI Definition
 * Business Analysis
-* Problem Solving
+* Data-Driven Decision Making
+
+---
+---
+
+## 📖 Project Documentation
+
+For a detailed explanation of the project, including the complete analysis process, user research, feature recommendations, and business insights, visit the Notion documentation below:
+
+🔗 **Notion Case Study:**  
+https://product-feedback-analysis.notion.site/Product-Feedback-Analysis-Zomato-38a646e3ec9c80f8812bf77cb3223346
 
 ---
 
-## 📁 Project Structure
+## 📌 Conclusion
 
-```text
-📦 Product-Feedback-Analysis
-│
-├── 📄 README.md
-├── 📊 zomato_review_analysis.xlsx
-├── 📑 Product_Recommendations.docx
-├── 📸 Dashboard Screenshots/
-└── 📈 Insights & Reports/
-```
+This project demonstrates how customer feedback can be transformed into actionable product decisions through structured analysis and product thinking. By identifying key user pain points, prioritizing improvements based on business impact, and defining measurable success metrics, the project showcases practical skills in Product Analytics and AI-assisted Product Management.
 
 ---
 
-## 📖 View Full Case Study
+## ⚠️ Disclaimer
 
-📌 **Notion Documentation**
+This project is an **independent educational case study** created solely for learning, portfolio, and research purposes. The analysis, insights, and feature recommendations are based on publicly available user reviews and are intended to demonstrate product analytics and data analysis skills. This project is **not affiliated with, endorsed by, or sponsored by Zomato**. All trademarks, logos, and brand names are the property of their respective owners.
 
-> **🔗 Notion:**https://product-feedback-analysis.notion.site/Product-Feedback-Analysis-Zomato-38a646e3ec9c80f8812bf77cb3223346
-
-.
-
----
-
-## 🎯 Conclusion
-
-This project demonstrates how AI-assisted analysis can transform unstructured customer feedback into actionable product insights. By identifying recurring pain points, prioritizing feature recommendations, and defining measurable success metrics, this case study showcases practical **Product Management**, **Business Analysis**, and **Data Analytics** skills.
-
----
-
-## ⭐ If you found this project interesting, consider giving it a star!
